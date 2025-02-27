@@ -90,7 +90,6 @@ export default function AboutPage() {
           </CardContent>
         </Card>
 
-        {/* Objectives Section */}
         <div className="mx-auto max-w-3xl mb-16 space-y-8">
           <h2 className="text-2xl font-bold text-white text-center">Objectives</h2>
           <div className="grid gap-6 sm:grid-cols-2">
