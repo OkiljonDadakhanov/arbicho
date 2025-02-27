@@ -20,11 +20,11 @@ const competitionItems = [
   },
   {
     title: "Past ARBICHO",
-    href: "/competition/past",
+    href: "/past-arbicho",
   },
   {
     title: "Future ARBICHO",
-    href: "/competition/future",
+    href: "/future-arbicho",
   },
 ];
 
@@ -39,26 +39,26 @@ const arbicho2025Items = [
   },
   {
     title: "Programme Schedule",
-    href: "/schedule",
+    href: "/programme-schedule",
   },
 ];
 
 const infoCenterItems = [
   {
     title: "Results & Reports",
-    href: '/results'
+    href: "/results",
   },
   {
     title: "Rules & Guidelines",
-    href: '/rules'
-  }
-]
+    href: "/rules",
+  },
+];
 
 export function MainNav() {
   return (
     <NavigationMenu className="max-w-none justify-end">
       <NavigationMenuList className="space-x-2">
-        <NavigationMenuItem className="relative">
+        <NavigationMenuItem>
           <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Home
@@ -66,7 +66,7 @@ export function MainNav() {
           </Link>
         </NavigationMenuItem>
 
-        <NavigationMenuItem className="relative">
+        <NavigationMenuItem>
           <Link href="/about" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               About ARBICHO
@@ -74,7 +74,7 @@ export function MainNav() {
           </Link>
         </NavigationMenuItem>
 
-        <NavigationMenuItem className="relative">
+        <NavigationMenuItem>
           <NavigationMenuTrigger>Competition</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4">
@@ -89,7 +89,7 @@ export function MainNav() {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        <NavigationMenuItem className="relative">
+        <NavigationMenuItem>
           <Link href="/arbicho-foundation" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               ARBICHO Foundation
@@ -97,7 +97,7 @@ export function MainNav() {
           </Link>
         </NavigationMenuItem>
 
-        <NavigationMenuItem className="relative">
+        <NavigationMenuItem>
           <NavigationMenuTrigger>Info Center</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4">
@@ -112,7 +112,7 @@ export function MainNav() {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        <NavigationMenuItem className="relative">
+        <NavigationMenuItem>
           <Link href="/gallery" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Gallery
@@ -120,7 +120,7 @@ export function MainNav() {
           </Link>
         </NavigationMenuItem>
 
-        <NavigationMenuItem className="relative">
+        <NavigationMenuItem>
           <NavigationMenuTrigger>ARBICHO 2025</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4">
@@ -135,7 +135,7 @@ export function MainNav() {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        <NavigationMenuItem className="relative">
+        <NavigationMenuItem>
           <Link href="/uzbekistan" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Uzbekistan
@@ -154,28 +154,42 @@ export function MobileNav({ onClose }: { onClose: () => void }) {
     <nav className="p-4">
       <ul className="space-y-4">
         <li>
-          <Link href="/" className="block text-white hover:text-emerald-300" onClick={onClose}>
+          <Link
+            href="/"
+            className="block text-white hover:text-emerald-300"
+            onClick={onClose}
+          >
             Home
           </Link>
         </li>
         <li>
-          <Link href="/about" className="block text-white hover:text-emerald-300" onClick={onClose}>
+          <Link
+            href="/about"
+            className="block text-white hover:text-emerald-300"
+            onClick={onClose}
+          >
             About ARBICHO
           </Link>
         </li>
         <li>
-          <button 
-            onClick={() => setOpenSubmenu(openSubmenu === 'competition' ? null : 'competition')}
+          <button
+            onClick={() =>
+              setOpenSubmenu(
+                openSubmenu === "competition" ? null : "competition"
+              )
+            }
             className="flex items-center justify-between w-full text-white hover:text-emerald-300"
           >
             Competition
-            <span className="ml-2">{openSubmenu === 'competition' ? '−' : '+'}</span>
+            <span className="ml-2">
+              {openSubmenu === "competition" ? "−" : "+"}
+            </span>
           </button>
-          {openSubmenu === 'competition' && (
+          {openSubmenu === "competition" && (
             <ul className="mt-2 ml-4 space-y-2">
               {competitionItems.map((item) => (
                 <li key={item.title}>
-                  <Link 
+                  <Link
                     href={item.href}
                     className="block text-white hover:text-emerald-300"
                     onClick={onClose}
@@ -188,28 +202,31 @@ export function MobileNav({ onClose }: { onClose: () => void }) {
           )}
         </li>
         <li>
-          <Link href="/arbicho-foundation" className="block text-white hover:text-emerald-300" onClick={onClose}>
+          <Link
+            href="/arbicho-foundation"
+            className="block text-white hover:text-emerald-300"
+            onClick={onClose}
+          >
             ARBICHO Foundation
           </Link>
         </li>
         <li>
-          <Link href="/gallery" className="block text-white hover:text-emerald-300" onClick={onClose}>
-            Gallery
-          </Link>
-        </li>
-        <li>
-          <button 
-            onClick={() => setOpenSubmenu(openSubmenu === 'arbicho2025' ? null : 'arbicho2025')}
+          <button
+            onClick={() =>
+              setOpenSubmenu(openSubmenu === "infoCenter" ? null : "infoCenter")
+            }
             className="flex items-center justify-between w-full text-white hover:text-emerald-300"
           >
-            ARBICHO 2025
-            <span className="ml-2">{openSubmenu === 'arbicho2025' ? '−' : '+'}</span>
+            Info Center
+            <span className="ml-2">
+              {openSubmenu === "infoCenter" ? "−" : "+"}
+            </span>
           </button>
-          {openSubmenu === 'arbicho2025' && (
+          {openSubmenu === "infoCenter" && (
             <ul className="mt-2 ml-4 space-y-2">
-              {arbicho2025Items.map((item) => (
+              {infoCenterItems.map((item) => (
                 <li key={item.title}>
-                  <Link 
+                  <Link
                     href={item.href}
                     className="block text-white hover:text-emerald-300"
                     onClick={onClose}
@@ -222,7 +239,50 @@ export function MobileNav({ onClose }: { onClose: () => void }) {
           )}
         </li>
         <li>
-          <Link href="/uzbekistan" className="block text-white hover:text-emerald-300" onClick={onClose}>
+          <Link
+            href="/gallery"
+            className="block text-white hover:text-emerald-300"
+            onClick={onClose}
+          >
+            Gallery
+          </Link>
+        </li>
+        <li>
+          <button
+            onClick={() =>
+              setOpenSubmenu(
+                openSubmenu === "arbicho2025" ? null : "arbicho2025"
+              )
+            }
+            className="flex items-center justify-between w-full text-white hover:text-emerald-300"
+          >
+            ARBICHO 2025
+            <span className="ml-2">
+              {openSubmenu === "arbicho2025" ? "−" : "+"}
+            </span>
+          </button>
+          {openSubmenu === "arbicho2025" && (
+            <ul className="mt-2 ml-4 space-y-2">
+              {arbicho2025Items.map((item) => (
+                <li key={item.title}>
+                  <Link
+                    href={item.href}
+                    className="block text-white hover:text-emerald-300"
+                    onClick={onClose}
+                  >
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+        <li>
+          <Link
+            href="/uzbekistan"
+            className="block text-white hover:text-emerald-300"
+            onClick={onClose}
+          >
             Uzbekistan
           </Link>
         </li>

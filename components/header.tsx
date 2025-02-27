@@ -1,4 +1,5 @@
-'use client'
+"use client";
+
 import { MainNav } from "@/components/main-nav";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,6 +10,10 @@ import { MobileNav } from "@/components/main-nav";
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleClose = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-emerald-800/10 bg-gradient-to-b from-emerald-900/95 to-[#011c2c]/95 backdrop-blur supports-[backdrop-filter]:from-emerald-900/80 supports-[backdrop-filter]:to-[#011c2c]/80">
       <div className="container flex h-16 items-center justify-between space-x-4 min-h-[120px] relative">
@@ -16,16 +21,16 @@ export function Header() {
           <Link href="/" className="flex items-center space-x-2">
             <Image
               src="/logo/logowhite.png"
-              width={80}
-              height={80}
+              width={60}
+              height={60}
               alt="logo of ARBIChO"
               className="w-auto h-auto"
             />
           </Link>
         </div>
-        
+
         {/* Mobile Menu Button */}
-        <button 
+        <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="lg:hidden p-2 text-white hover:text-emerald-300"
         >
@@ -40,7 +45,7 @@ export function Header() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="absolute top-full left-0 right-0 bg-emerald-900/95 lg:hidden">
-            <MobileNav onClose={() => setIsMenuOpen(false)} />
+            <MobileNav onClose={handleClose} />
           </div>
         )}
       </div>
