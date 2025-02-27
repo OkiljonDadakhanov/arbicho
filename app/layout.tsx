@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
@@ -15,7 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Abu Rayhan Biruni International Chemistry Olympiad | Global Science Competition",
+  title:
+    "Abu Rayhan Biruni International Chemistry Olympiad | Global Science Competition",
   description:
     "Compete in the Abu Rayhan Biruni International Chemistry Olympiad, a prestigious global competition for young chemists. Test your skills, gain recognition, and connect with future scientists.",
 };
@@ -33,6 +35,7 @@ export default function RootLayout({
         <Header />
         {children}
         <SiteFooter />
+        <Analytics />
       </body>
     </html>
   );
