@@ -304,6 +304,7 @@ export default function GalleryPage() {
                   setSelectedCategory("All");
                 }}
               >
+                
                 Reset Filters
               </Button>
             </div>
