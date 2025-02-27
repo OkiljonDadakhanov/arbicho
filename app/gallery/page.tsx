@@ -310,6 +310,9 @@ export default function GalleryPage() {
           )}
         </div>
 
+   
+
+
         {/* Image Viewer Dialog */}
         <Dialog
           open={!!selectedImage}
