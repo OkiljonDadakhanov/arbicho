@@ -93,6 +93,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-3xl mb-16 space-y-8">
           <h2 className="text-2xl font-bold text-white text-center">Objectives</h2>
           <div className="grid gap-6 sm:grid-cols-2">
+            
             {[
               {
                 icon: <Target className="h-8 w-8 text-emerald-400" />,
