@@ -29,7 +29,7 @@ interface GalleryImage {
 const galleryImages: GalleryImage[] = [
   {
     id: 1,
-    src: "/images/samarkand.png",
+    src: "",
     alt: "Opening Ceremony 2023",
     year: "2023",
     category: "Ceremonies",
@@ -38,7 +38,7 @@ const galleryImages: GalleryImage[] = [
   },
   {
     id: 2,
-    src: "/images/samarkand.png",
+    src: "",
     alt: "Laboratory Session 2023",
     year: "2023",
     category: "Competition",
@@ -47,7 +47,7 @@ const galleryImages: GalleryImage[] = [
   },
   {
     id: 3,
-    src: "/images/samarkand.png",
+    src: "",
     alt: "Award Ceremony 2023",
     year: "2023",
     category: "Ceremonies",
@@ -55,7 +55,7 @@ const galleryImages: GalleryImage[] = [
   },
   {
     id: 4,
-    src: "/images/samarkand.png",
+    src: "",
     alt: "Cultural Program 2023",
     year: "2023",
     category: "Cultural",
@@ -63,7 +63,7 @@ const galleryImages: GalleryImage[] = [
   },
   {
     id: 5,
-    src: "/images/samarkand.png",
+    src: "",
     alt: "Team Photo 2023",
     year: "2023",
     category: "Teams",
@@ -71,7 +71,7 @@ const galleryImages: GalleryImage[] = [
   },
   {
     id: 6,
-    src: "/images/samarkand.png",
+    src: "",
     alt: "Opening Ceremony 2022",
     year: "2022",
     category: "Ceremonies",
@@ -80,7 +80,7 @@ const galleryImages: GalleryImage[] = [
   },
   {
     id: 7,
-    src: "/images/samarkand.png",
+    src: "",
     alt: "Laboratory Session 2022",
     year: "2022",
     category: "Competition",
@@ -89,7 +89,7 @@ const galleryImages: GalleryImage[] = [
   },
   {
     id: 8,
-    src: "/images/samarkand.png",
+    src: "",
     alt: "Award Ceremony 2022",
     year: "2022",
     category: "Ceremonies",
@@ -97,7 +97,7 @@ const galleryImages: GalleryImage[] = [
   },
   {
     id: 9,
-    src: "/images/samarkand.png",
+    src: "",
     alt: "Cultural Program 2022",
     year: "2022",
     category: "Cultural",
@@ -105,7 +105,7 @@ const galleryImages: GalleryImage[] = [
   },
   {
     id: 10,
-    src: "/images/samarkand.png",
+    src: "",
     alt: "Team Photo 2022",
     year: "2022",
     category: "Teams",
@@ -113,7 +113,7 @@ const galleryImages: GalleryImage[] = [
   },
   {
     id: 11,
-    src: "/images/samarkand.png",
+    src: "",
     alt: "Opening Ceremony 2021",
     year: "2021",
     category: "Ceremonies",
@@ -121,7 +121,7 @@ const galleryImages: GalleryImage[] = [
   },
   {
     id: 12,
-    src: "/images/samarkand.png",
+    src: "",
     alt: "Laboratory Session 2021",
     year: "2021",
     category: "Competition",
@@ -130,7 +130,7 @@ const galleryImages: GalleryImage[] = [
   },
   {
     id: 13,
-    src: "/images/samarkand.png",
+    src: "",
     alt: "Award Ceremony 2021",
     year: "2021",
     category: "Ceremonies",
@@ -138,7 +138,7 @@ const galleryImages: GalleryImage[] = [
   },
   {
     id: 14,
-    src: "/images/samarkand.png",
+    src: "",
     alt: "Team Photo 2021",
     year: "2021",
     category: "Teams",
@@ -147,7 +147,7 @@ const galleryImages: GalleryImage[] = [
   },
   {
     id: 15,
-    src: "/images/samarkand.png",
+    src: "",
     alt: "Scientific Committee 2023",
     year: "2023",
     category: "Organization",
@@ -156,7 +156,7 @@ const galleryImages: GalleryImage[] = [
   },
   {
     id: 16,
-    src: "/images/samarkand.png",
+    src: "",
     alt: "Organizing Committee 2022",
     year: "2022",
     category: "Organization",
@@ -304,15 +304,11 @@ export default function GalleryPage() {
                   setSelectedCategory("All");
                 }}
               >
-                
                 Reset Filters
               </Button>
             </div>
           )}
         </div>
-
-   
-
 
         {/* Image Viewer Dialog */}
         <Dialog

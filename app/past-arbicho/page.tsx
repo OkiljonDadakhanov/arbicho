@@ -346,7 +346,7 @@ export default function PastARBIChOPage() {
                           className="relative aspect-square overflow-hidden rounded-lg"
                         >
                           <Image
-                            src={`/images/samarkand.png`}
+                            src={``}
                             alt={`ARBIChO ${competition.year} Photo ${item}`}
                             fill
                             className="object-cover"
